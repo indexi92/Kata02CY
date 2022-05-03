@@ -71,6 +71,7 @@ describe("addToCart", () => {
 
   it("addMonitor", () => {
     cy.get("#cartur").click();
-    cy.wait(3000);
+    cy.wait(1000);
+    cy.get("#page-wrapper").find(".btn").should("include.text", "Place Order");
   });
 });

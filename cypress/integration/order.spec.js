@@ -56,11 +56,11 @@ describe("Order", () => {
       .find("[tabindex=1]")
       .should("include.text", "OK")
       .click();
-    cy.wait(1000);
+    // cy.wait(1000);
     // cy.url().should("eq", "https://www.demoblaze.com/index.html");
   });
 
-  it.only("orderPurchase", () => {
+  it("orderPurchase", () => {
     cy.get("#cartur").click();
     cy.get("#page-wrapper")
       .find(".btn")
