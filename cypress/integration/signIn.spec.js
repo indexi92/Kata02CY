@@ -18,8 +18,8 @@ describe("UserCréation", () => {
     cy.get("#sign-username").type("test").should("include.value", "test");
     cy.get("#sign-password").type("test").should("include.value", "test");
     cy.get("#signInModal").find(".btn-primary").click();
-    cy.on("window:alert", (Text) => {
-      expect(Text).contain("This user already exist.");
+    cy.on("window:alert", (text) => {
+      expect(text).contain("This user already exist.");
     });
   });
 
