@@ -71,8 +71,8 @@ describe("Order", () => {
       .find(".btn-primary")
       .should("include.text", "Purchase")
       .click();
-    cy.on("window:alert", (Text) => {
-      expect(Text).contain("Please fill out Name and Creditcard.");
+    cy.on("window:alert", (text) => {
+      expect(text).contain("Please fill out Name and Creditcard.");
     });
     cy.on("window:confirm", () => true);
   });

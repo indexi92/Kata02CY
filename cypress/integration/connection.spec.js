@@ -53,8 +53,8 @@ describe("UserCréation", () => {
         .find(".btn-primary")
         .should("include.text", "Log in")
         .click();
-      cy.on("window:alert", (Text) => {
-        expect(Text).contain("Wrong password.");
+      cy.on("window:alert", (text) => {
+        expect(text).contain("Wrong password.");
       });
     });
   });
@@ -78,8 +78,8 @@ describe("UserCréation", () => {
         .find(".btn-primary")
         .should("include.text", "Log in")
         .click();
-      cy.on("window:alert", (Text) => {
-        expect(Text).contain("Wrong password.");
+      cy.on("window:alert", (text) => {
+        expect(text).contain("Wrong password.");
       });
     });
   });
@@ -102,8 +102,8 @@ describe("UserCréation", () => {
       .find(".btn-primary")
       .should("include.text", "Log in")
       .click();
-    cy.on("window:alert", (Text) => {
-      expect(Text).contain("User does not exist.");
+    cy.on("window:alert", (text) => {
+      expect(text).contain("User does not exist.");
     });
   });
 
