@@ -15,7 +15,10 @@ describe("apiTest", () => {
     cy.wait("@Phone").then((intercept) => {
       let request = intercept.request;
       let response = intercept.response;
+      expect(request.url).to.contain("view");
       expect(response.statusCode).eq(200);
+      expect(response.body.cat).include("phone");
+      expect(response.statusMessage).contain("OK");
     });
   });
 });
