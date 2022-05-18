@@ -22,7 +22,7 @@ describe("apiTest", () => {
     });
   });
 
-  it.only("intercept", () => {
+  it("intercept", () => {
     cy.intercept(
       {
         url: "**/view**",
